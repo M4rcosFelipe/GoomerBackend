@@ -1,0 +1,554 @@
+#main-wrapper{
+    width:89%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin:auto;
+}
+
+.main-content{
+    margin-top:24px;
+    width:802px;
+    padding:0px; 
+}
+
+
+.restaurant-data{
+    
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.restaurant--image{
+    width:145px;
+    height:145px;
+    object-fit: cover;
+}
+
+.restaurant--name{
+    margin:0px;
+    padding:0px;
+    font-size: 24px;
+    line-height: 29px;
+
+}
+.wrapper{
+    margin-left:11px;
+    max-width: 529px;
+    display:grid;
+    grid-template-rows:auto auto auto;
+    justify-items:start;
+    align-items:center;
+    padding:0px;
+    padding-left:10px;
+
+
+}
+p{
+    margin:0px;
+    padding:0px;
+    font-size:12px;
+    line-height: 15px;
+    color: #404040;
+}
+
+.horario{
+    font-weight: bold;
+    line-height:15px;
+    
+}
+
+.restaurant-description{
+    line-height:19px;
+    font-size:16px;
+    color:#404040;
+}
+
+.buscar-no-cardapio{
+    width:73%;
+    height:40px;
+    box-shadow:0px 2px 4px #0000001A;
+    border:none;
+    background-color:#E6E6E6;
+    border-radius:0px 40px 40px 0px;
+    background-image:url("../images/search_icon.svg");
+    background-repeat: no-repeat;
+    background-position:98%;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding-left:15px;
+    padding-right:34px;
+    color:#404040;
+}
+
+#search-button{
+    display:none;
+}
+
+.search-span{
+    color:#404040;
+    width:213px;
+    display:inline-block;
+    box-sizing: border-box;
+    padding:10px 0px 10px 28px;
+    border-radius:40px 0px 0px 40px;
+    box-shadow:0px 2px 4px #0000001A;
+    font-size:16px;
+}
+
+
+.form-search{
+    margin-top:26px;
+}
+
+#cardapio{
+    list-style:none;
+    padding:0px;
+    margin:0px;
+    margin-top:24px;
+    margin-bottom:186px;
+    width:100%;
+
+}
+
+#cardapio-label{
+    margin-top:16px;
+    box-sizing: border-box;
+    display: block; 
+    width:99%;
+    height: 42px;
+    line-height:42px;
+    text-decoration: none; 
+    color: #404040;
+    border-bottom: 1px solid #404040; 
+    cursor: pointer;
+    padding-left:13px;
+    margin-left:10px;
+    background:url(../images/chevron-down.svg);
+    background-position:95%;
+    background-repeat: no-repeat;
+}
+
+
+.checkbox-input{
+    display:none;
+}
+
+.options{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,386px);
+    grid-column-gap:30px;
+    width:100%;
+    margin:0px;  
+    padding:0px;
+    justify-content: start;
+}
+
+
+.menu-item{
+    box-sizing: border-box;
+    grid-template-columns:115px minmax(auto,271px);
+    box-shadow: 0px 4px 8px #00000029;
+    margin-top:24px;
+    text-align:left;
+    cursor:pointer;
+    display: none;
+   
+} 
+
+@keyframes mostrar{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes esconder {
+    from{opacity:1;}
+    to{opacity:0;}
+}
+.checkbox-input:checked + .options .menu-item{
+    display:grid;
+    animation: mostrar 0.3s ;
+}
+
+.menu-item:hover{
+    box-shadow: 0px 2px 20px #00000029;
+}
+
+.prato-image{
+    width:115px;
+    height:115px;
+    align-self: center;
+    object-fit: cover;
+    justify-self: center;
+}
+
+.prato-name{
+    margin:0px;
+    padding:0px;
+    line-height:17px;
+    font-size:16px;
+    text-align:left;
+
+}
+.prato-wrapper{
+    display:grid;
+    grid-template-rows:auto auto auto;
+    padding:16px;
+
+
+}
+.name-wrapper{
+    display:flex;
+    justify-content: space-between;
+}
+
+.promo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+    width:103px;
+    height: 21px;
+    background-color:#2B0D61;
+    border-radius:11px;
+    font-size:8px;
+    font-weight: bold;  
+    color:#fff;
+}
+.logo-promo{
+    margin-right:3.5px;
+}
+
+.prato-description{
+    margin:0px;
+    padding:0px;
+    font-size:12px;
+    line-height: 15px;
+    color: #404040;
+}
+
+.preco{
+    display:flex;
+    align-items:baseline;
+}
+.preco p{
+    font-weight: bold;
+    line-height:19px;
+    font-size: 16px;
+    color:#009CA3;
+    display:inline;
+    margin-right:7px;
+}
+
+.preco strike{
+    color:#989898;
+    font-size:12px;
+    line-height: 15px;
+}
+
+aside{
+    width:282px;
+    height:765px;
+    background-color:#E6E6E6;
+    margin-left:15px;
+    margin-top:185px;
+}
+
+
+
+.fechar-modal{
+    box-sizing: border-box;
+    padding:12px;
+    width:48px;
+    height:48px;
+    border-radius:48px;
+    border:none;
+    cursor:pointer;
+    box-shadow:0px 2px 4px rgba(0,0,0,0.29);
+    background-color:#fff;
+
+    position:absolute;
+    right:-24px;
+    top:-24px;    
+}
+
+.icon-fechar{
+    width:24px;
+}
+
+
+.modal-container{
+    width:100vw;
+    height:100vh;
+    background-color:rgba(0,0,0,0.29);
+    clear:both;
+    position:fixed;
+    top:0px;
+    left:0px;
+    display:flex;
+    justify-content: center;
+    overflow-y: scroll;
+
+    
+}
+
+.modal-content{
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px #00000033;
+    border-radius: 8px;
+    width:601px;
+    position:absolute;
+    margin-top:10%;
+
+}
+
+#modal-image{
+    box-sizing: border-box;
+    padding:23px 24px 0px 24px;
+    width:100%;
+    height:196px;
+}
+
+.modal-text{
+    display:grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-row-gap:5px;
+    grid-column-gap:65px;
+    margin-top:45px;
+    padding:0px 9px 0px 9px;
+    align-items:end;
+}
+
+.modal-nome{
+    margin-top:45px;
+    font-size:24px;
+    line-height:29px;
+    padding:0px;
+    padding-left:9px;
+}
+.flex-text{
+    display:flex;
+    justify-content:space-between;
+    padding:5px 9px 0px 16px;
+    flex-wrap:wrap;
+    align-items:flex-end;
+}
+.modal-description{
+    font-size:16px;
+    line-height:19px;
+    max-width:380px;
+}
+
+.modal-preco{
+    font-size:32px;
+    line-height:39px;
+    color:#009CA3;
+}
+
+
+
+
+.botoes-quantidade{
+    width:150px;
+    display:grid;
+    grid-template-columns: repeat(3,50px);
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    margin-top:25px;
+    margin-right:10px;
+
+}
+
+#quantidade{
+    margin:0px;
+    width:50px;
+    height:50px;
+    text-align:center;
+    border:none;
+    padding:0px;
+    font-size: 20px;
+    line-height: 24px;
+    color:#009CA3;
+    font-weight: bold;
+
+}
+
+.botao{
+    margin:0px;
+    height:50px;
+    width:50px;
+    background-color:#fff;
+    display:inline-block;
+    font-size:2.2em;
+    text-align:center;
+    line-height: 50px;
+    color:#009CA3;
+    cursor:pointer;
+}
+
+.mais{
+    text-align:left;
+
+}
+.menos{
+    text-align:right;
+}
+
+.actions{
+    display:flex;
+    justify-content: space-between;
+    border-top: 1px solid #E6E6E6;
+    margin-top:25px;
+    padding:0px 12px 20px 12px;
+    flex-wrap:wrap;
+}
+.adicionar{
+    box-sizing: border-box;
+    padding:13px;
+    border-radius:4px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    width:265px;
+    background-color:#009CA3;
+    color:#fff;
+    font-size:20px;
+    line-height:24px;
+    margin-top:25px;
+    cursor:pointer;
+
+}
+.adicionar:hover{
+    background-color:rgb(0, 119, 126);
+}
+
+.span-preco{
+    margin-left:10px;
+}
+
+
+@media(max-width:1251px){
+    .main-content{
+        width:100%;
+    }
+ 
+    .restaurant-description{
+        margin-top:5px;
+    }
+    .horarios{
+        margin-top:5px;
+    }
+}
+
+@media(max-width:460px){
+    .options{
+        grid-template-columns: repeat(auto-fill,100%);
+    }
+    .promo{
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+    .name-wrapper{
+        flex-wrap:wrap;
+
+    }
+}
+
+
+
+
+#finded-container{
+    margin-top:26px;
+    display:grid;
+
+}
+
+.fechar-finded-container{
+    justify-self:end;
+    cursor:pointer;
+    justify-self:start;
+}
+
+.total-finded-text{
+    margin-top:10px;
+    color:#989898;
+}
+
+
+
+#finded-list li{
+    display:grid;
+    animation: mostrar .3s;
+}
+
+@media(max-width:464px){
+    .restaurant-data{
+        justify-content:center;
+    }
+     .wrapper{
+         margin-top:10px;
+     }
+}
+
+
+@media(max-width:700px){
+    .modal-content{
+        width:80%;
+    }
+}
+
+@media(max-width:564px){
+    .actions{
+        justify-content: center;
+    }
+}
+
+.carrinho{
+    padding:10px;
+}
+.cart-item{
+    display:grid;
+    grid-template-columns:70px auto auto;
+    grid-column-gap: 20px;
+    padding:10px 0px;
+    border-bottom: 0.5px solid rgb(177, 177, 177);
+}
+.cart-item-preco{
+    grid-row:2;
+    grid-column:2;
+}
+
+.cart-item-quantidade{
+    align-self: center;
+    grid-column:3;
+    font-weight: bolder;
+    grid-row:1/3;
+}
+
+.cart-item-name{
+    align-self: end;
+}
+.cart-item-image{
+    width:70px;
+    height:70px;
+    grid-row:1/3;
+    object-fit: cover;
+}
+
+.subtotal,.total,.desconto{
+    display:flex;
+    margin-top:10px;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+.total{
+    color:#009CA3;
+}
+
+
+
+
+

@@ -1,0 +1,33 @@
+
+    <header></header>
+
+    <h1>Bem vindo ao Lista Rango</h1>
+
+    <input id="search" type="text" placeholder="Buscar estabelecimento"/>
+    <button id="buscar"></button>
+
+    <section id="restaurant-container">
+
+        {{#each restaurantes}}
+
+            <a  href="/restaurante/{{dataValues.id}}" class="restaurant-status">
+
+                <div class="restaurant">
+                    <img class="restaurant-image" src={{dataValues.image}}>
+                    <p class="restaurant-name">{{dataValues.name}}<a href="/restaurante/deletar/{{dataValues.id}}">DELETAR</a></p>
+                    <p class="restaurant-address">{{dataValues.address}}</p>     
+                </div>
+                
+            </a>
+        {{/each}}
+
+        {{!-- <div id="loading"></div> --}}
+
+    </section>
+
+{{!-- <script src="/assets/scripts/index.js"></script> --}}
+
+
+
+
+

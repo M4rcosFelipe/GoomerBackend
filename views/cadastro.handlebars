@@ -1,0 +1,29 @@
+{{#if message}}
+    <h1>{{message}}</h1>
+{{/if}}
+
+<form action="/cadastro" method="POST">
+
+    <label>
+        Imagem:
+        <input type="text" name="image">
+    </label>
+    
+    <br>
+    
+    <label>
+        Nome:
+        <input type="text" name="name">
+    </label>
+
+    <br>
+
+    <label>
+        Endereço:
+        <input type="text" name="address">
+    </label>
+    
+    <br>
+    
+    <input type="submit" value="Enviar">
+</form>

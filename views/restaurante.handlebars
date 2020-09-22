@@ -1,0 +1,61 @@
+
+<header></header>
+
+
+{{!-- <div id="loading"></div> --}}
+
+<div id="main-wrapper">
+
+<main class="main-content">
+
+    <div class="restaurant-data"> 
+
+        <img class="restaurant--image"src="{{restaurante.dataValues.image}}">
+
+        <div class="wrapper">
+            <h1 class="restaurant--name">{{restaurante.dataValues.name}}</h1>
+            <p class="restaurant-description">{{restaurante.dataValues.address}}</p>    
+            
+        </div>
+
+    </div> 
+ 
+     <ul id="cardapio">
+
+    </ul>
+    
+</main>
+
+    <aside class="carrinho">
+        <button class="limpar">limpar</button>
+        <h2>Carrinho</h2>
+
+        <div class="carrinho-items">
+
+        </div>
+
+        <div class="informacoes">
+            
+            <div class="subtotal">
+                <p>SUBTOTAL:</p>
+                <span class="subtotal-value">R$0,00</span>
+            </div>
+            
+            <div class="desconto">
+                <p>DESCONTO:</p>
+                <span class="desconto-value">R$0,00</span>
+            </div>
+
+            <div class="total">
+                <p>TOTAL:</p>
+                <span class="total-value">R$0,00</span>
+            </div>
+        </div> 
+            
+    </aside>
+
+</div>
+
+
+
+<script src="/assets/scripts/restaurante.js"></script>
